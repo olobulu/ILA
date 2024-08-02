@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .registration-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        
+        input[type="text"], input[type="file"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="registration-container">
+        <h1>Register After Card Upload</h1>
+        <form action="/submit-registration" method="post" enctype="multipart/form-data">
+            <img src="images/membership.jpeg" alt="Membership">
+            <br>
+            <label for="cardNumber">Membership Number:</label>
+            <input type="text" id="cardNumber" name="cardNumber" required>
+
+            <label for="membershipCard">Upload Membership Card:</label>
+            <input type="file" id="membershipCard" name="membershipCard" accept="image/*" required>
+
+            <button type="submit">Next</button>
+            <br>
+            <a href="pay.html" style="text-align: center; background-color:hsl(73, 82%, 50%); text-decoration:none;">Pay_for_Membership</a>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+.payment {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px; /* Added padding for spacing */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Adjust alignment */
+    height: auto; /* Allow the section to grow in height */
+    gap: 20px; /* Space between the containers */
+    flex-wrap: wrap; /* Allow wrapping of containers */
+    margin-bottom: 40px; /* Ensure space between payment section and footer */
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1 1 calc(33.333% - 40px); /* Responsive width with margin */
+    margin: 10px;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.progress, .members, .time {
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    width: 100%;
+    background: #eee;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#progressFill {
+    height: 20px;
+    background: #76c7c0;
+    width: 0;
+}
+
+.payment-form input {
+    padding: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.payment-form button {
+    padding: 10px 20px;
+    border: none;
+    background: #76c7c0;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.payment-form button:hover {
+    background: #64b0aa;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex: 1 1 calc(50% - 20px); /* 50% width for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .payment {
+        flex-direction: column; /* Arrange containers vertically */
+        height: auto; /* Adjust height for vertical layout */
+        gap: 10px; /* Reduce gap for vertical layout */
+    }
+    .container {
+        flex: 1 1 100%; /* Full width for mobile */
+        margin: 5px 0; /* Reduce margin for vertical layout */
+    }
+}
